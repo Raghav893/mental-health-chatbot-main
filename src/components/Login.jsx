@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { auth } from '../firebase'; 
+import { signInWithEmailAndPassword } from 'firebase/auth'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -15,16 +17,20 @@ const Login = () => {
     setSuccess('');
 
     try {
-      console.log('Login attempt with:', { email, password });
+      
+      await signInWithEmailAndPassword(auth, email, password);
+
       setSuccess('Logged in successfully! Welcome back!');
       setEmail('');
       setPassword('');
 
+      
       setTimeout(() => {
         navigate('/chat');
       }, 1000);
     } catch (err) {
-      setError('Login failed. Please try again.');
+      
+      setError('Login failed. Please check your email or password.');
     }
   };
 
