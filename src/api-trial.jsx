@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import './index.css'
 
 
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY || "AIzaSyD6NbQ_zozSf--2n2NTgeHDGIkzuJAUCGk";
