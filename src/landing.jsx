@@ -41,7 +41,7 @@ export default function Landing() {
                     <h1>Mindful Companion</h1>
                     <p className="subtitle">Your personal mental health support, available anytime</p>
                     <div className="hero-buttons">
-                        <button className="btn-primary">Get Started</button>
+                        <Link  to="/signup"  ><button className="btn-primary">Get Started</button></Link>
                         <button className="btn-secondary">Learn More</button>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ export default function Landing() {
                 <div className="cta-content">
                     <h2>Ready to take charge of your mental well-being?</h2>
                     <p>Join thousands of users who have improved their mental health with MindfulCompanion</p>
-                    <button className="btn-primary">Get Started Free</button>
+                    <Link to ="/signup"><button className="btn-primary">Get Started Free</button></Link>
                     <p className="cta-footnote">No credit card required</p>
                 </div>
             </section>
